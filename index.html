@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Comprovante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Gerar Comprovante de Garantia</h1>
+  <div class="container">
+    <div class="column">
+      <div class="form">
+        <h3>Dados do Aplicador</h3>
+
+        <label for="vendedor">Vendedor:</label>
+        <input type="text" id="vendedor" required>
+
+        <label for="emailVendedor">Email:</label>
+        <input type="email" id="emailVendedor" required>
+
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" required>
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" required>
+
+        <label for="numeroPedido">Número do Pedido:</label>
+        <input type="text" id="numeroPedido" required>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="form">
+        <h3>Dados do Cliente</h3>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" required>
+
+        <label for="uf">Estado:</label>
+        <select id="uf" required>
+          <option value="">Selecionar</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="form">
+        <h3>Dados do Veículo</h3>
+
+        <label for="modeloVeiculo">Modelo do Veículo:</label>
+        <input type="text" id="modeloVeiculo" required>
+
+        <label for="Placa">Placa/Chassi do Veículo:</label>
+        <input type="text" id="Placa" required>
+
+        <label for="vltLateralTraseiro">VLT Lateral e Traseiro:</label>
+        <select id="vltLateralTraseiro" required>
+          <option value="NÃO APLICÁVEL">Não Aplicável</option>
+          <option value="COLOR STABLE 05">05</option>
+          <option value="COLOR STABLE 20">20</option>
+          <option value="COLOR STABLE 35">35</option>
+          <option value="COLOR STABLE 70">70</option>
+        </select>
+
+        <label for="vltParabrisa">VLT Para-brisa:</label>
+        <select id="vltParabrisa" required>
+          <option value="NÃO APLICÁVEL">Não Aplicável</option>
+          <option value="COLOR STABLE 05">05</option>
+          <option value="COLOR STABLE 20">20</option>
+          <option value="COLOR STABLE 35">35</option>
+          <option value="COLOR STABLE 70">70</option>
+        </select>
+
+        <label for="vltTetoSolar">VLT Teto Solar:</label>
+        <select id="vltTetoSolar" required>
+          <option value="NÃO APLICÁVEL">Não Aplicável</option>
+          <option value="COLOR STABLE 05">05</option>
+          <option value="COLOR STABLE 20">20</option>
+          <option value="COLOR STABLE 35">35</option>
+          <option value="COLOR STABLE 70">70</option>
+        </select>
+
+        <label for="dataAplicacao">Data de Aplicação:</label>
+        <input type="date" id="dataAplicacao" required>
+
+        <label for="observacao">Observação:</label>
+        <textarea id="observacao" required></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button id="generatePDF">Gerar Comprovante</button>
+  </div>
+
+  <script src="https://unpkg.com/pdf-lib"></script>
+  <script src="script.js"></script>
+</body>
+</html>
